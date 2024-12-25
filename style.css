@@ -1,9 +1,7 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('https://www.google.com/url?sa=i&url=https%3A%2F%2Fstock.adobe.com%2Fsearch%3Fk%3Dkids%2Bbirthday%2Bbackground&psig=AOvVaw0Pd6prgLWfbNUPSgII5R74&ust=1735210595166000&source=images&cd=vfe&opi=89978449&ved=0CBQQjRxqFwoTCPjOzrHhwooDFQAAAAAdAAAAABAE'); /* Replace with your image URL */
-    background-size: cover;
-    background-position: center;
-    color: white;
+    background-color: #f0f8ff;
+    color: #333;
     text-align: center;
     padding-top: 50px;
     animation: fadeInBackground 2s ease-in-out;
@@ -16,7 +14,7 @@ body {
 
 h1 {
     color: #ff69b4;
-    font-size: 3em;
+    font-size: 3.5em;
     margin-top: 20px;
     animation: slideInFromTop 1.5s ease-out;
 }
@@ -28,7 +26,7 @@ h1 {
 
 .message {
     color: #4CAF50;
-    font-size: 1.5em;
+    font-size: 1.8em;
     margin: 20px 0;
     animation: fadeIn 1s ease-in-out;
 }
@@ -43,7 +41,7 @@ button {
     background-color: #4CAF50;
     border: none;
     color: white;
-    font-size: 1.2em;
+    font-size: 1.5em;
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
@@ -78,61 +76,66 @@ button:hover {
     display: none;
 }
 
-/* Balloon Animations */
-.balloon-container {
+/* Flower Animations */
+.flower-container {
     position: absolute;
-    top: 15%;
+    top: 20%;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }
 
-.balloon {
-    width: 50px;
-    height: 80px;
-    background-color: #ff69b4;
+.flower {
+    width: 60px;
+    height: 60px;
+    background-color: #ff1493;
     border-radius: 50%;
-    position: absolute;
-    animation: floatBalloon 6s linear infinite;
+    opacity: 0;
+    animation: bloomFlower 3s infinite ease-in-out;
 }
 
-@keyframes floatBalloon {
-    0% {
-        transform: translateY(0) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-300px) rotate(360deg);
-    }
-    100% {
-        transform: translateY(0) rotate(0deg);
-    }
+@keyframes bloomFlower {
+    0% { opacity: 0; transform: scale(0.5); }
+    50% { opacity: 1; transform: scale(1.5); }
+    100% { opacity: 0; transform: scale(0.5); }
 }
 
-.balloon1 {
-    animation-duration: 6s;
+.flower1 {
     animation-delay: 0s;
-    left: 0;
 }
 
-.balloon2 {
-    animation-duration: 5.5s;
+.flower2 {
     animation-delay: 1s;
-    left: 80px;
 }
 
-.balloon3 {
-    animation-duration: 5s;
+.flower3 {
     animation-delay: 2s;
-    left: 160px;
 }
 
-/* Cake Animation */
-.cake {
-    font-size: 4em;
-    animation: bounceCake 1s ease infinite;
+/* Party Popper */
+.party-popper {
+    font-size: 6em;
+    animation: popConfetti 1s ease infinite;
 }
 
-@keyframes bounceCake {
-    0% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
+@keyframes popConfetti {
+    0% { transform: rotate(0); color: #ff6347; }
+    50% { transform: rotate(360deg); color: #4CAF50; }
+    100% { transform: rotate(0); color: #ff6347; }
+}
+
+/* Personalized Message */
+.personal-message p {
+    font-size: 2em;
+    font-style: italic;
+    color: #ff69b4;
+    margin-top: 30px;
+    animation: slideInMessage 2s ease;
+}
+
+@keyframes slideInMessage {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(0); }
 }
