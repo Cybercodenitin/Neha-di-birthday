@@ -89,9 +89,8 @@ button:hover {
 }
 
 .flower {
-    width: 60px;
-    height: 60px;
-    background-color: #ff1493;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     opacity: 0;
     animation: bloomFlower 3s infinite ease-in-out;
