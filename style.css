@@ -76,4 +76,63 @@ button:hover {
 
 .hidden {
     display: none;
-        }
+}
+
+/* Balloon Animations */
+.balloon-container {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.balloon {
+    width: 50px;
+    height: 80px;
+    background-color: #ff69b4;
+    border-radius: 50%;
+    position: absolute;
+    animation: floatBalloon 6s linear infinite;
+}
+
+@keyframes floatBalloon {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-300px) rotate(360deg);
+    }
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+.balloon1 {
+    animation-duration: 6s;
+    animation-delay: 0s;
+    left: 0;
+}
+
+.balloon2 {
+    animation-duration: 5.5s;
+    animation-delay: 1s;
+    left: 80px;
+}
+
+.balloon3 {
+    animation-duration: 5s;
+    animation-delay: 2s;
+    left: 160px;
+}
+
+/* Cake Animation */
+.cake {
+    font-size: 4em;
+    animation: bounceCake 1s ease infinite;
+}
+
+@keyframes bounceCake {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
