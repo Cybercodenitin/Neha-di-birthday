@@ -5,8 +5,6 @@ body {
     text-align: center;
     padding-top: 50px;
     animation: fadeInBackground 2s ease-in-out;
-    background-image: url("Birthday.jpg");
-    background-size: fill;
 }
 
 @keyframes fadeInBackground {
